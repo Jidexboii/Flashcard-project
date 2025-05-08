@@ -31,7 +31,7 @@ h1 {
   height: 20%;
   width: 50%;
   cursor: pointer;
-  border: 8px dashed black;
+  border: 5px dashed black;
   padding:5px;
   font:1.2em cursive;
 }
