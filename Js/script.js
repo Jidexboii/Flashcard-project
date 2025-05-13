@@ -1,123 +1,19 @@
-$(document).ready(function () {
-   $(".chek1").click(function () {
-      $(".mean1").slideToggle()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek2").click(function () {
-      $(".mean2").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek3").click(function () {
-      $(".mean3").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek4").click(function () {
-      $(".mean4").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek5").click(function () {
-      $(".mean5").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek6").click(function () {
-      $(".mean6").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
+function handleToggle(targetIndex) {
+   for (let i = 1; i <= 10; i++) {
+      const selector = `.mean${i}`;
+      if (i === targetIndex) {
+         $(selector).slideToggle();
+      } else {
+         $(selector).slideUp();
+      }
+   }
+}
 
-   })
-   $(".chek7").click(function () {
-      $(".mean7").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek8").click(function () {
-      $(".mean8").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean9").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek9").click(function () {
-      $(".mean9").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean10").slideUp()
-   })
-   $(".chek10").click(function () {
-      $(".mean10").slideToggle()
-      $(".mean1").slideUp()
-      $(".mean2").slideUp()
-      $(".mean3").slideUp()
-      $(".mean4").slideUp()
-      $(".mean5").slideUp()
-      $(".mean6").slideUp()
-      $(".mean7").slideUp()
-      $(".mean8").slideUp()
-      $(".mean9").slideUp()
-   })
-})
+
+$(document).ready(function () {
+   for (let i = 1; i <= 10; i++) {
+      $(`.chek${i}`).click(function () {
+         handleToggle(i);
+      });
+   }
+});
